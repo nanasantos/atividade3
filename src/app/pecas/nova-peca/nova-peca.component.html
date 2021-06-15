@@ -1,0 +1,90 @@
+<ion-header>
+    <ion-toolbar>
+    <ion-buttons slot="start">
+        <ion-menu-toggle>
+        <ion-button>
+            <ion-icon slot="icon-only" name="menu"></ion-icon>
+        </ion-button>
+        </ion-menu-toggle>
+    </ion-buttons>
+    <ion-title class="ion-text-center">Cadastrar Novas Peças</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <div class="list-group">
+         <form #f="ngForm" (ngSubmit)="onSubmit(f)">
+           
+            <div class="form-item">
+                <div class="col-25">
+                    <label for="codigo">Código: </label>
+                </div>
+                <div class="col-75">
+                    <input type="text" id="codigo" name="codigo" [(ngModel)]="codigo" required>
+                </div>
+            </div>
+            <div class="form-item">
+                <div class="col-25">
+                    <label for="descricao">Descrição: </label>
+                </div>
+                <div class="col-75">
+                    <input type="text" id="descricao" name="descricao" [(ngModel)]="descricao" required>
+                </div>
+            </div>
+            <div class="form-item">
+                <div class="col-40">
+                    <label for="preco">Preço: </label>
+                </div>
+                <div class="col-60">
+                    <input type="number" id="preco" name="preco" [(ngModel)]="preco" required>
+                </div>
+            </div>    
+                <div class="form-item">
+                    <div class="col-40">
+                        <label for="tipo">Tipo: </label>
+                    </div>
+                    <div class="col-60">
+                        <input type="string" id="tipo" name="tipo" [(ngModel)]="tipo" required>
+                    </div>
+            </div>
+            <div class="form-item">
+                <div class="col-40">
+                    <label for="quantidade">Quantidade : </label>
+                </div>
+                <div class="col-60">
+                    <input type="number" id="quantidade" name="quantidade" [(ngModel)]="quantidade" required>
+                </div>
+            </div>
+            <div class="form-item">
+                <div class="col-40">
+                    <label for="quantidadeMinima">Quantidade mínima: </label>
+                </div>
+                <div class="col-60">
+                    <input type="number" id="quantidadeMinima" name="quantidadeMinima" [(ngModel)]="quantidadeMinima" required>
+                </div>
+            </div>
+            <div class="form-item">
+                <div class="col-40">
+                    <label for="quantidadeMaxima">Quantidade máxima: </label>
+                </div>
+                <div class="col-60">
+                    <input type="number" id="quantidadeMaxima" name="quantidadeMaxima" [(ngModel)]="quantidadeMaxima" required>
+                </div>
+            </div>
+            <div class="form-item">
+                <div class="col-40">
+                    <label for="loja">Loja: </label>
+                </div>
+                <div class="col-60">
+                    <input type="loja" id="loja" name="loja" [(ngModel)]="loja" required>
+                </div>
+            </div>    
+            <div class="form-item">
+                <div class="nova">
+                    <ion-button expand="block" type='submit'>Cadastrar</ion-button>
+                </div>
+            </div>
+
+        </form>
+    </div>
+</ion-content>

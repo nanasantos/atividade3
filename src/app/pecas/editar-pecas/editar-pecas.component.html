@@ -1,0 +1,58 @@
+<ion-header>
+    <ion-toolbar>
+    <ion-buttons slot="start">
+        <ion-menu-toggle>
+        <ion-button>
+            <ion-icon slot="icon-only" name="menu"></ion-icon>
+        </ion-button>
+        </ion-menu-toggle>
+    </ion-buttons>
+    <ion-title class="ion-text-center">Editar</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <div class="list-group">
+
+        <p class="list-normal">
+            Código : ({{peca?.getCod}}) 
+        </p>
+        <p class="list-normal">
+            Descrição : {{peca?.getDescricao}}
+        </p>
+        <p class="list-normal">
+            Preço: R$ {{peca?.getPreco}}
+        </p>
+        <p class="list-normal">
+            Tipo: ({{peca?.getTipo}}) 
+        </p>
+        <p [ngClass]="{
+            'list-orange': alert == 3,'list-red': alert == 2,'list-normal': alert == 1
+        }">
+            Quantidade disponível: {{peca?.getQuantidade}}
+        </p>
+        <p class="list-normal">
+           Quantidade máxima: {{peca?.getQuantidadeMaxima}}
+        </p>
+        <p class="list-normal">
+            Quantidade mínima necessária: {{peca?.getQuantidadeMinima}}
+        </p>
+        <p class="list-normal">
+           Nome da Loja: {{peca?.getLoja}}
+        </p>
+        <br>
+    
+        <div class="quantidade">
+            
+            <label for="quantidade">Insira a quantidade para atualizar o estoque: </label>
+            <br>
+            <input type="number" id="quantidade" name="quantidade" [(ngModel)]="quantidade" required>
+            <br>
+            <ion-button size="small"  (click)="atualizarQuantidade(1)">(+) Adicionar</ion-button>
+            <ion-button size="small"  (click)="atualizarQuantidade(-1)">(-) Remover</ion-button>
+    
+        </div>
+    
+    </div>
+</ion-content>
+

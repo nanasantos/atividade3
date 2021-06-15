@@ -1,0 +1,46 @@
+<ion-app>
+	<ion-split-pane when="sm" content-id="main-content">
+	  <ion-menu content-id="main-content">
+		<ion-header>
+		  <ion-toolbar color="primary">
+			<ion-title>Menu</ion-title>
+		  </ion-toolbar>
+		</ion-header>
+  
+		<ion-content>
+		  <ion-list>
+			<ion-list-header>
+			  
+			</ion-list-header>
+				<ion-menu-toggle auto-hide="false">
+					<ion-item routerLink="/" button>
+				 		 <ion-icon slot="start" name='document-text-outline'></ion-icon>
+				 		 <ion-label>
+							Lista das Peças
+				 		 </ion-label>
+					</ion-item>
+			  </ion-menu-toggle>
+			  <ion-menu-toggle auto-hide="false">
+					<ion-item  routerLink="/nova-peca" button>
+						<ion-icon slot="start" name="clipboard-outline"></ion-icon>
+				 		 <ion-label>
+							Cadastrar Peças
+				  		</ion-label>
+					</ion-item>
+			  </ion-menu-toggle>
+			  <ion-menu-toggle auto-hide="false">
+				<ion-item  routerLink="/nova-loja" button>
+					<ion-icon slot="start" name="clipboard"></ion-icon>
+					  <ion-label>
+						Cadastrar Lojas
+					  </ion-label>
+				</ion-item>
+		  </ion-menu-toggle>
+		 	 </ion-list>
+		</ion-content>
+	  </ion-menu>
+	  <ion-router-outlet id="main-content"></ion-router-outlet>
+	</ion-split-pane>
+</ion-app>
+
+ 

@@ -1,0 +1,90 @@
+<ion-header>
+    <ion-toolbar>
+    <ion-buttons slot="start">
+        <ion-menu-toggle>
+        <ion-button>
+            <ion-icon slot="icon-only" name="menu"></ion-icon>
+        </ion-button>
+        </ion-menu-toggle>
+    </ion-buttons>
+    <ion-title class="ion-text-center">Cadastrar Lojas</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <div class="list-group">
+         <form #f="ngForm" (ngSubmit)="onSubmit(f)">
+           
+             <div class="form-item">
+                <div class="col-25">
+                    <label for="email">E-mail: </label>
+                </div>
+                <div class="col-75">
+                    <input type="string" id="email" name="email" [(ngModel)]="email" required>
+                </div>
+            </div>
+             <div class="form-item">
+                <div class="col-40">
+                    <label for="senha">Senha : </label>
+                </div>
+                <div class="col-60">
+                    <input type="string" id="senha" name="senha" [(ngModel)]="senha" required>
+                </div>
+            </div>
+            <div class="form-item">
+                <div class="col-40">
+                    <label for="nome_gerente">Nome do(a) Gerente: </label>
+                </div>
+                <div class="col-60">
+                    <input type="string" id="nome_gerente" name="nome_gerente" [(ngModel)]="nome_gerente" required>
+                </div>
+            </div>
+            <div class="form-item">
+                <div class="col-40">
+                    <label for="nome">Nome: </label>
+                </div>
+                <div class="col-60">
+                    <input type="string" id="nome" name="nome" [(ngModel)]="nome" required>
+                </div>
+            </div>
+            <div class="form-item">
+                <div class="col-40">
+                    <label for="cnpj">CNPJ: </label>
+                </div>
+                <div class="col-60">
+                    <input type="string" id="cnpj" name="cnpj" [(ngModel)]="cnpj" required>
+                </div>
+            </div>
+            <div class="form-item">
+                <div class="col-40">
+                    <label for="telefone">Telefone: </label>
+                </div>
+                <div class="col-60">
+                    <input type="string" id="telefone" name="telefone" [(ngModel)]="telefone" required>
+                </div>
+            </div>    
+            <div class="form-item">
+                <div class="col-40">
+                    <label for="endereco">Endereço: </label>
+                </div>
+                <div class="col-60">
+                    <input type="string" id="endereco" name="endereco" [(ngModel)]="endereco" required>
+                </div>
+            </div>    
+            <div class="form-item">
+                <div class="col-40">
+                    <label for="coordenadas">Coordenadas: </label>
+                </div>
+                <div class="col-60">
+                    <input type="string" id="coordenadas" name="coordenadas" [(ngModel)]="coordenadas" required>
+                </div>
+            </div>    
+            <div class="form-item">
+                <div class="nova">
+                    <ion-button expand="block" type='submit'>Cadastrar</ion-button>
+                </div>
+            </div>
+
+        </form>
+    </div>
+</ion-content>
